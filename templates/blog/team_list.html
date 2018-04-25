@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for team in teams %}
+        <div class="post">
+            <h1><a href="{% url 'team_detail' pk=team.pk %}">{{ team.teamName }}</a> - {{ team.teamScore }}</h1>
+
+        </div>
+    {% endfor %}
+{% endblock content %}

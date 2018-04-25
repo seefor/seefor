@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+        <div class="post">
+            <h1>Team Name: {{ test.playerTeam }}</h1>
+            <h3>{{ team.playerName }} - {{ team.playerScore }}</h1>
+        </div>
+    {% for o in team.playerName.all %}
+            <h3>{{ o.playerName }} - {{ o.playerScore }}</h1>
+
+    {% endfor %}
+
+{% endblock %}
